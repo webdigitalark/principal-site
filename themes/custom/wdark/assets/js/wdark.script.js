@@ -17794,7 +17794,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if ($('.language-link')) {
-        $(".language-switcher-language-url .language-link").each(function () {
+        $(".block--wdark-languageswitchercontent .language-link").each(function () {
           if ($(this).attr('data-drupal-link-system-path') != '<front>') {
             if ($(this).attr('hreflang') != 'es') {
               $(this).attr('href', "/" + $(this).attr('hreflang') + "/" + $(this).attr('data-drupal-link-system-path'));

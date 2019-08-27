@@ -12,7 +12,7 @@ import 'bootstrap';
       	$('#particles-js').css('opacity','100');	
       }
       if($('.language-link')){
-      	$( ".language-switcher-language-url .language-link" ).each(function() {
+      	$( ".block--wdark-languageswitchercontent .language-link" ).each(function() {
       		if ($(this).attr('data-drupal-link-system-path') != '<front>') {
 	      		if ($(this).attr('hreflang') != 'es') {
 
