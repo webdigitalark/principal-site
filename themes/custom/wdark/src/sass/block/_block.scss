@@ -1,0 +1,21 @@
+.container-clients{
+	min-height: 82vh;
+	background-color: white;
+	opacity: 0.8;
+	h2{
+		color: black !important;
+	}
+	.clients-title{
+	    padding: 40px;
+	}
+	.clients{
+		text-align: center;
+	    border: 2px solid #5ABAE1;
+	    padding: 20px;	
+		position: relative;
+    	top: 8rem;	    	
+		svg{
+			max-width: 300px;
+		}
+	}
+}

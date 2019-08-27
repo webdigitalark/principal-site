@@ -1,0 +1,90 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+<!-- <div class="transition anim-trans"></div> -->
+<div id="particles-js" class="page ">
+  {% embed '@radix/navbar/navbar.twig' with {
+    placement: 'sticky-top',
+    container: 'fluid',
+    color: 'light',
+    utility_classes: ['bg-light'],
+  } %}
+
+    {% block branding %}
+      {% if page.navbar_branding %}
+        {{ page.navbar_branding }}
+      {% endif %}
+    {% endblock %}
+
+    {% block left %}
+      {% if page.navbar_left %}
+        <div class="mr-auto">
+          {{ page.navbar_left }}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block right %}
+      {% if page.navbar_right %}
+        {{ page.navbar_right }}
+      {% endif %}
+    {% endblock %}
+  {% endembed %}
+
+  <main class="pb-5">
+    {% if page.header %}
+      <header class="page__header mb-3">
+        <div class="fluid">
+          {{ page.header }}
+        </div>
+      </header>
+    {% endif %}
+    <a class="lang-switcher" href="{{ switch_path }}">{{ switch_lang }}</a>
+    {% if page.content %}
+      <div class="page__content">
+        <div class="fluid">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endif %}
+  </main>
+
+  {% if page.footer or page.footer_left or page.footer_center or page.footer_right or page.footer_bottom %}
+    <footer class="page__footer">
+      {% if page.footer %}
+      <div class="fluid">
+        <div class="d-flex justify-content-md-between align-items-md-center footer-top">
+          {{ page.footer }}
+        </div>
+      </div>
+      {% endif %}
+      <div class="row">
+      {% if page.footer_left %}
+          <div class="d-flex justify-content-md-center align-items-md-center col-sm footer-left">
+            {{ page.footer_left }}
+          </div>
+      {% endif %}
+      {% if page.footer_center %}    
+          <div class="d-flex justify-content-md-between align-items-md-center col-sm footer-center">
+            {{ page.footer_center }}
+          </div>
+      {% endif %}
+      {% if page.footer_right %}    
+          <div class="d-flex justify-content-md-between align-items-md-center col-sm footer-right">
+            {{ page.footer_right }}
+          </div>        
+      {% endif %}       
+      </div>       
+      {% if page.footer_bottom %}
+      <div class="d-flex fluid footer-bottom justify-content-md-center">
+        <div class=" justify-content-md-between align-items-md-center">
+          {{ page.footer_bottom }}
+        </div>
+      </div>
+      {% endif %}          
+    </footer>
+  {% endif %}
+</div>

@@ -1,0 +1,12 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/wdark.style.css: {}
+  js:
+    assets/js/particles.min.js: {}
+    assets/js/app.js: {}    
+    assets/js/wdark.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

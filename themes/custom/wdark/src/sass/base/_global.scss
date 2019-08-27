@@ -1,0 +1,111 @@
+body{
+	font: normal normal bold 90px/1.4em raleway,sans-serif;
+	font-size: 16px;
+  text-transform: uppercase;
+  .breadcrumb{
+    background-color: transparent;
+  }
+  #particles-js{
+    opacity: 0;
+    transition: opacity 2s;
+    p{
+      color: white;
+    }    
+    strong{
+      color: #5ABAE1;
+    }
+    h2{
+      color: #ffffff;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 4rem;
+      line-height: 0.9em;  
+    }    
+  }
+	> .container-fluid{
+		padding: 0;
+	}  
+  .particles-js-canvas-el{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: black;    
+  } 
+	footer {
+	  background-color: #0b212f;
+	  position: fixed;
+	  bottom: 0;
+	  width: 100%;
+	  color: white;
+    .footer-left{
+      .navbar-brand{
+        .mr-2{
+          width: 55px;
+        } 
+      }      
+    }    
+	}	
+  //flip
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 10px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h4{
+      position: relative;
+      color: white;          
+
+    }
+    img{
+      height: 100%;
+    }
+  }
+
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    padding-top: 40%;
+    line-height: 1em; 
+    position:absolute;
+    bottom:0;
+    a{
+      font-size: 2rem;
+      line-height: 2rem;
+      text-decoration: none;
+    }
+  }   
+}
+

@@ -1,0 +1,9 @@
+name: Wdark Language
+type: module
+description: Wdark Module custom for alter languages
+package: Wdark
+
+# Information added by Drupal.org packaging script on 2019-03-27
+version: '8.x-1.10'
+core: '8.x'
+project: 'wdark_language'

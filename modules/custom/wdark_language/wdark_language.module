@@ -1,0 +1,14 @@
+<?php 
+function wdark_language_language_switch_links_alter(array &$links, $type, $path) {
+  global $language;
+  if ($type == LANGUAGE_TYPE_CONTENT && isset($links[$language->language])) {
+    foreach ($links[$language->language] as $link) {
+      $link['attributes']['class'][] = 'active-language';
+    }
+  }
+}
+
+// function wdark_link_alter(&$variables) {
+// 	print_r($variables);
+//   kint($variables['url']);
+// }
