@@ -9863,6 +9863,7 @@ body .flip-card-back a {
 .services-home header {
   width: 100%;
   height: auto;
+  padding: 40px;
 }
 .services-home header h1 {
   color: white;
