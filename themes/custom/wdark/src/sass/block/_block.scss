@@ -1,6 +1,6 @@
 .container-clients{
 	min-height: 82vh;
-	background-color: white;
+	background-color: #CCCCCC;
 	opacity: 0.8;
 	h2{
 		color: black !important;
@@ -9,13 +9,24 @@
 	    padding: 40px;
 	}
 	.clients{
-		text-align: center;
-	    border: 2px solid #5ABAE1;
+		// text-align: center;
+	    // border: 2px solid #5ABAE1;
 	    padding: 20px;	
 		position: relative;
-    	top: 8rem;	    	
-		svg{
-			max-width: 300px;
-		}
+    	// top: 8rem;
+    	a{
+    		margin: 20px;
+			svg{
+				max-width: 300px;
+				filter: grayscale(100%);
+				padding: 30px;
+				background-color: white;
+			}
+			img{
+				max-width: 200px;	
+		    	filter: grayscale(100%);
+			}
+    	}	    	
+		
 	}
 }

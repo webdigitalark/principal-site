@@ -9652,7 +9652,7 @@ body .flip-card {
   height: 300px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  margin: 10px;
+  margin: 30px;
 }
 body .flip-card-inner {
   position: relative;
@@ -9685,6 +9685,7 @@ body .flip-card-front {
 body .flip-card-front h4 {
   position: relative;
   color: white;
+  padding: 20px;
 }
 body .flip-card-front img {
   height: 100%;
@@ -9768,25 +9769,25 @@ body .flip-card-back a {
 .navbar .navbar-collapse.show {
   height: 100vh;
 }
-.navbar .navbar-collapse .language-switcher-language-url {
+.navbar .navbar-collapse .block--wdark-languageswitchercontent {
   display: flex;
   padding: 20px 0 0 20px;
 }
-.navbar .navbar-collapse .language-switcher-language-url .nav {
+.navbar .navbar-collapse .block--wdark-languageswitchercontent .nav {
   display: flex;
 }
-.navbar .navbar-collapse .language-switcher-language-url .nav .nav-item {
+.navbar .navbar-collapse .block--wdark-languageswitchercontent .nav .nav-item {
   width: 50px;
   text-align: center;
   text-transform: uppercase;
 }
-.navbar .navbar-collapse .language-switcher-language-url .nav .nav-item a {
+.navbar .navbar-collapse .block--wdark-languageswitchercontent .nav .nav-item a {
   color: #FFFFFF;
 }
-.navbar .navbar-collapse .language-switcher-language-url .nav .nav-item a:hover {
+.navbar .navbar-collapse .block--wdark-languageswitchercontent .nav .nav-item a:hover {
   color: #FF0;
 }
-.navbar .navbar-collapse .language-switcher-language-url .nav .nav-item a.is-active {
+.navbar .navbar-collapse .block--wdark-languageswitchercontent .nav .nav-item a.is-active {
   color: #FF0;
   transition: all 0.3s linear 0s;
 }
@@ -9845,13 +9846,16 @@ body .flip-card-back a {
   width: 100%;
   height: auto;
 }
+.services-home header h1 {
+  color: white;
+}
 .services-home .views-row {
   padding: 0 0 60px;
 }
 
 .container-clients {
   min-height: 82vh;
-  background-color: white;
+  background-color: #CCCCCC;
   opacity: 0.8;
 }
 .container-clients h2 {
@@ -9861,12 +9865,21 @@ body .flip-card-back a {
   padding: 40px;
 }
 .container-clients .clients {
-  text-align: center;
-  border: 2px solid #5ABAE1;
   padding: 20px;
   position: relative;
-  top: 8rem;
 }
-.container-clients .clients svg {
+.container-clients .clients a {
+  margin: 20px;
+}
+.container-clients .clients a svg {
   max-width: 300px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  padding: 30px;
+  background-color: white;
+}
+.container-clients .clients a img {
+  max-width: 200px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
