@@ -9890,8 +9890,8 @@ body .flip-card-back a {
 }
 @media (max-width: 720px) {
   .container-clients .clients a svg {
-    max-width: 90%;
-    width: 90%;
+    max-width: 53%;
+    width: 53%;
   }
 }
 .container-clients .clients a img {
@@ -9901,8 +9901,6 @@ body .flip-card-back a {
 }
 @media (max-width: 720px) {
   .container-clients .clients a img {
-    max-width: 90%;
-    width: 90%;
     top: 30px;
     bottom: 30px;
     position: relative;

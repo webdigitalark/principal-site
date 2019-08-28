@@ -22,8 +22,8 @@
 			svg{
 				max-width: 300px;
 				@media(max-width: 720px){
-		    		max-width: 90%;
-		    		width: 90%;
+		    		max-width: 53%;
+		    		width: 53%;
 		    	}				
 				filter: grayscale(100%);
 				padding: 30px;
@@ -32,8 +32,8 @@
 			img{
 				max-width: 200px;
 				@media(max-width: 720px){
-	    			max-width: 90%;
-	    			width: 90%;
+	    			// max-width: 90%;
+	    			// width: 90%;
     			    top: 30px;
     			    bottom: 30px;
     				position: relative;
