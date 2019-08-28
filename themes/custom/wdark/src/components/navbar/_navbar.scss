@@ -68,7 +68,15 @@
     background-color:#5ABAE1;
   } 
   .navbar-collapse{
-    flex-grow: 0;
+    @media(min-width: 1140px){
+      max-width: 50%;
+    }
+    
+    @media(max-width: 1140px){
+      justify-content: center !important;
+      flex-grow: 0;  
+    }
+    
     &.show{
       height: 100vh;
     }

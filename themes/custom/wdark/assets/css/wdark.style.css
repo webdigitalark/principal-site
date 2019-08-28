@@ -9772,8 +9772,16 @@ body .flip-card-back a {
 .navbar .navbar-toggler {
   background-color: #5ABAE1;
 }
-.navbar .navbar-collapse {
-  flex-grow: 0;
+@media (min-width: 1140px) {
+  .navbar .navbar-collapse {
+    max-width: 50%;
+  }
+}
+@media (max-width: 1140px) {
+  .navbar .navbar-collapse {
+    justify-content: center !important;
+    flex-grow: 0;
+  }
 }
 .navbar .navbar-collapse.show {
   height: 100vh;
