@@ -9829,6 +9829,7 @@ body .flip-card-back a {
 .banner-block .views-row {
   position: absolute;
   bottom: 2px;
+  padding: 40px;
 }
 .banner-block .views-row .title-banner {
   color: #5ABAE1;
