@@ -48,7 +48,12 @@ body{
       }      
     }
     .footer-bottom{
-      color: #5ABAE1;
+      .basic__body{
+        p{
+          color: #5ABAE1;
+        }
+      }
+      
     }    
     .block--contactenos{
       line-height: 1px;

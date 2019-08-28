@@ -9640,7 +9640,7 @@ body footer {
 body footer .footer-left .navbar-brand .mr-2 {
   width: 55px;
 }
-body footer .footer-bottom {
+body footer .footer-bottom .basic__body p {
   color: #5ABAE1;
 }
 body footer .block--contactenos {
