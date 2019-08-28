@@ -9643,6 +9643,10 @@ body footer .footer-left .navbar-brand .mr-2 {
 body footer .block--contactenos {
   line-height: 1px;
 }
+body footer .block--contactenos .basic__body {
+  position: relative;
+  top: 40%;
+}
 body footer .block--contactenos a {
   text-transform: lowercase;
 }

@@ -49,6 +49,10 @@ body{
     }
     .block--contactenos{
       line-height: 1px;
+      .basic__body{
+        position: relative;
+        top: 40%;
+      }
       a{
         text-transform: lowercase;
       }
