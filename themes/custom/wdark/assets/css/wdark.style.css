@@ -9641,7 +9641,7 @@ body footer .footer-left .navbar-brand .mr-2 {
   width: 55px;
 }
 body footer .footer-bottom .basic__body p {
-  color: #5ABAE1;
+  color: #5ABAE1 !important;
 }
 body footer .block--contactenos {
   line-height: 1px;
