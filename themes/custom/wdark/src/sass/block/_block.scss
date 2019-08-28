@@ -13,18 +13,33 @@
 	    // border: 2px solid #5ABAE1;
 	    padding: 20px;	
 		position: relative;
+		@media(max-width: 720px){
+			text-align: center;
+		}
     	// top: 8rem;
     	a{
-    		margin: 20px;
+    		margin: 20px;    		
 			svg{
 				max-width: 300px;
+				@media(max-width: 720px){
+		    		max-width: 90%;
+		    		width: 90%;
+		    	}				
 				filter: grayscale(100%);
 				padding: 30px;
 				background-color: white;
 			}
 			img{
-				max-width: 200px;	
+				max-width: 200px;
+				@media(max-width: 720px){
+	    			max-width: 90%;
+	    			width: 90%;
+    			    top: 30px;
+    			    bottom: 30px;
+    				position: relative;
+	    		}	
 		    	filter: grayscale(100%);
+		    	
 			}
     	}	    	
 		

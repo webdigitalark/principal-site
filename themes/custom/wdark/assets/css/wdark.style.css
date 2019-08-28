@@ -9873,6 +9873,11 @@ body .flip-card-back a {
   padding: 20px;
   position: relative;
 }
+@media (max-width: 720px) {
+  .container-clients .clients {
+    text-align: center;
+  }
+}
 .container-clients .clients a {
   margin: 20px;
 }
@@ -9883,8 +9888,23 @@ body .flip-card-back a {
   padding: 30px;
   background-color: white;
 }
+@media (max-width: 720px) {
+  .container-clients .clients a svg {
+    max-width: 90%;
+    width: 90%;
+  }
+}
 .container-clients .clients a img {
   max-width: 200px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+}
+@media (max-width: 720px) {
+  .container-clients .clients a img {
+    max-width: 90%;
+    width: 90%;
+    top: 30px;
+    bottom: 30px;
+    position: relative;
+  }
 }
