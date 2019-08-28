@@ -1,6 +1,9 @@
 .navbar {
   background-color: #0b212f !important;
   justify-content: center !important; 
+  @media (min-width: 920px){
+    justify-content: space-around !important; 
+  }
   padding: 0;  
   .navbar-brand{
     color: #5ABAE1; 
@@ -71,7 +74,8 @@
     }
     .block--wdark-languageswitchercontent{
       display:flex;
-      padding: 20px 0 0 20px; 
+      padding: 20px 0 0 20px;
+      margin-left: 100px; 
       .nav{
         display:flex;
         .nav-item{    

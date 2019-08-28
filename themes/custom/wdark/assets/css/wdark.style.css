@@ -9688,7 +9688,6 @@ body .flip-card-front {
   background-size: cover;
 }
 body .flip-card-front h4 {
-  position: relative;
   color: white;
   padding: 20px;
 }
@@ -9715,6 +9714,11 @@ body .flip-card-back a {
   background-color: #0b212f !important;
   justify-content: center !important;
   padding: 0;
+}
+@media (min-width: 920px) {
+  .navbar {
+    justify-content: space-around !important;
+  }
 }
 .navbar .navbar-brand {
   color: #5ABAE1;
@@ -9777,6 +9781,7 @@ body .flip-card-back a {
 .navbar .navbar-collapse .block--wdark-languageswitchercontent {
   display: flex;
   padding: 20px 0 0 20px;
+  margin-left: 100px;
 }
 .navbar .navbar-collapse .block--wdark-languageswitchercontent .nav {
   display: flex;
