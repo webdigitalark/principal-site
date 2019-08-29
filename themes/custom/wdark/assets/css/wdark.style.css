@@ -9694,11 +9694,11 @@ body .flip-card-front h4 {
   color: black;
   padding: 20px;
   position: relative;
-  top: 70%;
+  top: 64%;
 }
 body .flip-card-front img {
   position: absolute;
-  top: 33%;
+  top: 26%;
   right: 30%;
 }
 body .flip-card-back {
