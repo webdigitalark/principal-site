@@ -101,15 +101,17 @@ body{
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
-
     h4{
-      // position: relative;
-      color: white;
+      color: black;
       padding: 20px;          
+      position: relative;
+      top: 70%;
 
     }
     img{
-      height: 100%;
+      position: absolute;
+      top: 33%;
+      right: 30%;      
     }
   }
 

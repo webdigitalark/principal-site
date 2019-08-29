@@ -9691,11 +9691,15 @@ body .flip-card-front {
   background-size: cover;
 }
 body .flip-card-front h4 {
-  color: white;
+  color: black;
   padding: 20px;
+  position: relative;
+  top: 70%;
 }
 body .flip-card-front img {
-  height: 100%;
+  position: absolute;
+  top: 33%;
+  right: 30%;
 }
 body .flip-card-back {
   background-color: #2980b9;
