@@ -1,15 +1,18 @@
 .container-clients{
-	min-height: 82vh;
-	background-color: #CCCCCC;
-	opacity: 0.8;
-	h2{
+	// min-height: 82vh;
+	background-color: #F1F1F1;
+	// opacity: 0.8;
+	z-index: 1;
+	h1{
 		color: black !important;
+		z-index: 1;
 	}
 	.clients-title{
+		// text-align: center;
 	    padding: 40px;
 	}
 	.clients{
-		// text-align: center;
+		text-align: center;
 	    // border: 2px solid #5ABAE1;
 	    padding: 20px;	
 		position: relative;

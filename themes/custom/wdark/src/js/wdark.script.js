@@ -21,22 +21,25 @@ import 'bootstrap';
 	      			$(this).attr('href',"/"+$(this).attr('data-drupal-link-system-path'));
 	      		}	
       		}
-		});
-     //  	$('.language-link').on('click', function(e){
-     //  		e.preventDefault();
-     //  		$(this).attr('hreflang');
-     //  		$(this).attr('href');
-     //  		// if(){
-
-     //  		// }
-     //  		console.log($(this).attr('hreflang'));
-     //  		console.log($(this).attr('hreflang')+"/"+$(this).attr('data-drupal-link-system-path'));
-  			// // window.location();
-  			// $(location).attr('href', "/"+$(this).attr('hreflang')+"/"+$(this).attr('data-drupal-link-system-path'));
-      		
-     //  	})
+		    });
       }
-      if('.navbar-nav'){
+      // if($('.list-services')){
+      //   console.log("entra");
+      //   $( ".list-services-container" ).each(function(i) {
+      //     var val = 0;
+      //     // $(this).hover(function(){
+      //     //   $(this).css('opacity',"1");  
+      //     // });
+      //     var item = $(this);
+      //     $(window).scroll(function() {
+      //         var top = item.offset().top;
+      //         if($(window).scrollTop() > top){
+      //             item.css('opacity',"1");
+      //         }
+      //     });  
+      //   });                
+      // }
+      if($('.navbar-nav')){
       	$('.navbar-nav .nav-link').on('click', function(e){
       		e.preventDefault();
       		var $targetClass = $(this).attr('target-data');

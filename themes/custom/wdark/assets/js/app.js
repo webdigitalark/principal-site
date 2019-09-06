@@ -86,7 +86,7 @@ particlesJS('particles-js',
       "events": {
         "onhover": {
           "enable": true,
-          "mode": "repulse"
+          "mode": "circle"
         },
         "onclick": {
           "enable": true,

@@ -9597,6 +9597,7 @@ body {
   font: normal normal bold 90px/1.4em raleway, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
+  background-color: black;
 }
 body .breadcrumb {
   background-color: transparent;
@@ -9635,6 +9636,9 @@ body footer {
   width: 100%;
   color: white;
 }
+body footer .row {
+  margin: 0;
+}
 body footer .footer-left .navbar-brand .mr-2 {
   width: 55px;
 }
@@ -9652,69 +9656,145 @@ body footer .block--contactenos .basic__body {
 body footer .block--contactenos a {
   text-transform: lowercase;
 }
-body .flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  margin: 30px;
-}
-body .flip-card-inner {
+
+[class*=icono] {
   position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: -webkit-transform 0.6s;
-  transition: transform 0.6s;
-  transition: transform 0.6s, -webkit-transform 0.6s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  vertical-align: middle;
+  color: #666;
+  box-sizing: border-box;
 }
-body .flip-card:hover .flip-card-inner {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-body .flip-card-front, body .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-body .flip-card-front {
-  background-color: white;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-body .flip-card-front h4 {
-  color: black;
-  padding: 20px;
-  position: relative;
-  top: 64%;
-}
-body .flip-card-front img {
-  position: absolute;
-  top: 26%;
-  right: 33%;
-}
-body .flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  padding-top: 40%;
-  line-height: 1em;
-  position: absolute;
-  bottom: 0;
-}
-body .flip-card-back a {
-  font-size: 2rem;
-  line-height: 2rem;
-  text-decoration: none;
+[class*=icono]:after, [class*=icono]:before {
+  content: "";
+  box-sizing: border-box;
 }
 
+[class*=icono-arrow1] {
+  width: 20px;
+  height: 20px;
+  border-width: 4px 4px 0 0;
+  border-style: solid;
+  margin: 10px;
+}
+[class*=icono-arrow1]:before {
+  right: 0;
+  top: -3px;
+  position: absolute;
+  height: 4px;
+  box-shadow: inset 0 0 0 32px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 23px;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+}
+[class*=icono-arrow1][class*=-left] {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arrow {
+  width: 35px;
+  height: 35px;
+  border: 2.5px solid;
+  border-color: white transparent transparent white;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.arrowSliding {
+  position: absolute;
+  -webkit-animation: slide 4s linear infinite;
+          animation: slide 4s linear infinite;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.delay2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.delay3 {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(-9px);
+            transform: translateY(-9px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(-9px);
+            transform: translateY(-9px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #5ABAE1;
+  }
+  15% {
+    text-shadow: 2px 2px 5px #5ABAE1, -2px -2px 5px #5ABAE1;
+  }
+  30% {
+    text-shadow: 2px 2px 4px #5ABAE1, -2px -2px 4px #5ABAE1;
+  }
+  50% {
+    text-shadow: 10px 10px 10px #5ABAE1, -10px -10px 10px #5ABAE1;
+  }
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #5ABAE1;
+  }
+  15% {
+    text-shadow: 2px 2px 5px #5ABAE1, -2px -2px 5px #5ABAE1;
+  }
+  30% {
+    text-shadow: 2px 2px 4px #5ABAE1, -2px -2px 4px #5ABAE1;
+  }
+  50% {
+    text-shadow: 10px 10px 10px #5ABAE1, -10px -10px 10px #5ABAE1;
+  }
+}
 .navbar {
   background-color: #0b212f !important;
   justify-content: center !important;
@@ -9725,6 +9805,11 @@ body .flip-card-back a {
     justify-content: space-around !important;
   }
 }
+@media (max-width: 920px) {
+  .navbar {
+    justify-content: space-between !important;
+  }
+}
 .navbar .navbar-brand {
   color: #5ABAE1;
 }
@@ -9733,6 +9818,12 @@ body .flip-card-back a {
 }
 .navbar .navbar-brand img {
   width: 55px;
+}
+@media (max-width: 920px) {
+  .navbar .navbar-brand {
+    position: relative;
+    left: 25px;
+  }
 }
 .navbar .navbar-nav .nav-item .nav-link {
   font: normal normal bold 90px/1.4em raleway, sans-serif;
@@ -9776,6 +9867,12 @@ body .flip-card-back a {
 }
 .navbar .navbar-toggler {
   background-color: #5ABAE1;
+}
+@media (max-width: 920px) {
+  .navbar .navbar-toggler {
+    position: relative;
+    right: 25px;
+  }
 }
 @media (min-width: 1140px) {
   .navbar .navbar-collapse {
@@ -9829,12 +9926,22 @@ body .flip-card-back a {
 .banner-block {
   position: relative;
   bottom: 0;
-  min-height: 74vh;
+  min-height: 84vh;
 }
 .banner-block .views-row {
   position: absolute;
   bottom: 2px;
   padding: 40px;
+  z-index: 1;
+}
+@media (max-width: 576px) {
+  .banner-block .views-row {
+    padding: 0;
+  }
+}
+.banner-block .views-row:hover {
+  -webkit-animation: glow 2s infinite;
+          animation: glow 2s infinite;
 }
 .banner-block .views-row .title-banner {
   color: #5ABAE1;
@@ -9842,6 +9949,11 @@ body .flip-card-back a {
   line-height: 1em;
   margin: auto;
   padding: 20px;
+}
+@media (max-width: 920px) {
+  .banner-block .views-row .title-banner {
+    font-size: 3em;
+  }
 }
 .banner-block .views-row .banner-description {
   font-size: 2rem;
@@ -9852,14 +9964,24 @@ body .flip-card-back a {
   font-size: 1rem;
   padding: 0 20px;
 }
+.banner-block .views-row .arrowAnim {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.banner-block .views-row .arrowAnimb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .services-home {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 50px;
   background-color: #0C2539;
-  opacity: 0.8;
+  opacity: 0.99;
 }
 @media (min-width: 992px) {
   .services-home {
@@ -9874,22 +9996,228 @@ body .flip-card-back a {
 .services-home header h1 {
   color: white;
 }
-.services-home .views-row {
-  padding: 0 0 60px;
+.services-home .services-card {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-bottom: 30px;
+  background-color: transparent;
+  text-decoration: none;
+  transition: -webkit-transform 0.2s ease-in;
+  box-shadow: 0 3px 10px 0 #DBDBDB;
+  width: 357.667px;
+  margin-right: 30px;
+}
+@media (max-width: 768px) {
+  .services-home .services-card {
+    margin-right: 0;
+  }
+}
+.services-home .services-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 5px 10px 5px #5ABAE1;
+  transition: opacity 0.3s ease 0.2s, transform 0.3s ease, -webkit-transform 0.3s ease !important;
+}
+.services-home .services-card:hover .services-banner {
+  padding: 0;
+  transition: padding 2s;
+}
+.services-home .services-card:hover .services-banner .image-loaded {
+  max-height: 20vh;
+  transition: height 2s ease-out;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  bottom: 0;
+}
+.services-home .services-card:hover .image-loaded {
+  transition: opacity 0.3s ease 0.2s, transform 0.3s ease, -webkit-transform 0.3s ease !important;
+}
+.services-home .services-card .services-banner {
+  transition: padding 2s;
+  padding-bottom: 33%;
+  position: relative;
+  overflow: hidden;
+}
+.services-home .services-card .services-banner:before {
+  transition: height 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  transition: height 0.2s ease-in, transform 0.2s ease-in;
+  transition: height 0.2s ease-in, transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  content: "";
+  display: block;
+  width: 105%;
+  padding: 50px;
+  background: transparent;
+  background-color: transparent;
+  position: absolute;
+  left: 15px;
+  bottom: -150px;
+  -webkit-transform: translate(-7.2%, -50%) rotate(-2deg);
+          transform: translate(-7.2%, -50%) rotate(-2deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  background-color: white;
+  z-index: 1;
+}
+.services-home .services-card .services-banner .image-loaded {
+  height: 0px;
+  transition: height 2s, height 2s ease-out;
+}
+.services-home .services-card .services-banner .image-loaded .img-thumbnail {
+  background-color: white;
+}
+.services-home .services-card .services-banner .image-loaded .img {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.services-home .services-card .services-info {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  background: white;
+  color: black;
+  height: 300px;
+}
+.services-home .services-card .services-info .services-info-title {
+  padding-bottom: 10px;
+}
+.services-home .services-card .services-info .services-info-excerpt p {
+  color: black !important;
+  text-transform: lowercase;
+}
+.services-home .services-card .services-info .services-info-excerpt p::first-letter {
+  text-transform: uppercase;
+}
+.services-home .services-card .services-info .services-info-button {
+  bottom: 10%;
+  color: #5ABAE1;
+  position: absolute;
+}
+.services-home .services-card .services-info .services-info-button .services-info-text .services-arrow {
+  display: inline;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin-left: 20px;
+}
+
+.list-services .list-services-container {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  padding: 5%;
+  color: black;
+  position: relative;
+  right: 5%;
+  transition: opacity 0.5s ease 0.5s, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.list-services .list-services-container:hover {
+  opacity: 0.99;
+}
+.list-services .list-services-container:hover p {
+  color: #5ABAE1 !important;
+}
+.list-services .list-services-container:hover .list-services-info {
+  background-color: #0C2539;
+  transition: background 0.5s ease 0.5s, -webkit-transform 0.5s ease;
+  transition: background 0.5s ease 0.5s, transform 0.5s ease;
+  transition: background 0.5s ease 0.5s, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.list-services .list-services-container:hover .list-services-title, .list-services .list-services-container:hover .list-services-description, .list-services .list-services-container:hover .list-services-image {
+  opacity: 1;
+  transition: opacity 0.5s ease 0.5s, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.list-services .list-services-container .list-services-title {
+  padding-bottom: 30px;
+  color: white;
+}
+.list-services .list-services-container .list-services-description {
+  padding: 20px;
+  opacity: 0;
+}
+.list-services .list-services-container .list-services-image {
+  width: 50%;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.list-services .list-services-container .list-services-image img {
+  top: 15%;
+  position: relative;
+  max-width: 35%;
+  background-color: transparent;
+  border: 0;
+}
+.list-services .list-services-container .list-services-info {
+  width: 50%;
+  border-right: 6px solid #5ABAE1;
+}
+.list-services .list-services-container .list-services-info .list-services-title {
+  padding: 20px;
+}
+.list-services .list-services-container .list-services-info .list-services-description {
+  padding: 20px;
+}
+.list-services .list-services-container:nth-child(2n) {
+  color: black;
+  left: 5%;
+  flex-direction: row-reverse;
+  border-left: 0;
+  transition: opacity 0.5s ease 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+.list-services .list-services-container:nth-child(2n):hover .list-services-title, .list-services .list-services-container:nth-child(2n):hover .list-services-description, .list-services .list-services-container:nth-child(2n):hover .list-services-image {
+  opacity: 1;
+  transition: opacity 0.5s ease 0.5s, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.list-services .list-services-container:nth-child(2n) .list-services-info {
+  left: 2px;
+  border-right: 0;
+  border-left: 6px solid #5ABAE1;
+}
+.list-services .list-services-container:nth-child(2n) .list-services-info .list-services-title {
+  padding: 20px;
+}
+.list-services .list-services-container:nth-child(2n) .list-services-info .list-services-description {
+  padding: 20px;
+}
+.list-services .list-services-container:nth-child(2n) .list-services-image img {
+  max-width: 70%;
+  background-color: transparent;
+  border: 0;
 }
 
 .container-clients {
-  min-height: 82vh;
-  background-color: #CCCCCC;
-  opacity: 0.8;
+  background-color: #F1F1F1;
+  z-index: 1;
 }
-.container-clients h2 {
+.container-clients h1 {
   color: black !important;
+  z-index: 1;
 }
 .container-clients .clients-title {
   padding: 40px;
 }
 .container-clients .clients {
+  text-align: center;
   padding: 20px;
   position: relative;
 }

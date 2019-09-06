@@ -4,6 +4,9 @@
   @media (min-width: 920px){
     justify-content: space-around !important; 
   }
+  @media (max-width: 920px){
+    justify-content: space-between !important; 
+  }
   padding: 0;  
   .navbar-brand{
     color: #5ABAE1; 
@@ -14,6 +17,10 @@
     img{
       width: 55px;
     }
+    @media (max-width: 920px){
+      position: relative;
+      left: 25px;
+    }    
   }
   .navbar-nav{
     // padding: 0 0 0 200px;     
@@ -66,6 +73,10 @@
   }
   .navbar-toggler{
     background-color:#5ABAE1;
+    @media (max-width: 920px){
+      position: relative;
+      right: 25px;
+    }     
   } 
   .navbar-collapse{
     @media(min-width: 1140px){
