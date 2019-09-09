@@ -38,8 +38,16 @@ mix.browserSync({
  | SASS
  |--------------------------------------------------------------------------
  */
-mix.sass('src/sass/wdark.style.scss', 'css');
-
+mix.sass('src/sass/webdigitalark.style.scss', 'css')
+.options({
+  autoprefixer: {
+    options: {
+      browsers: [
+        'last 6 versions',
+      ]
+    }
+  }
+});
 /*
  |--------------------------------------------------------------------------
  | JS
