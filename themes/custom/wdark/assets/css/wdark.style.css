@@ -9991,7 +9991,7 @@ body footer .block--contactenos a {
 .services-home header {
   width: 100%;
   height: auto;
-  padding: 40px;
+  padding: 40px 0;
 }
 .services-home header h1 {
   color: white;
