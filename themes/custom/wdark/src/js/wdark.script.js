@@ -23,22 +23,23 @@ import 'bootstrap';
       		}
 		    });
       }
-      // if($('.list-services')){
-      //   console.log("entra");
-      //   $( ".list-services-container" ).each(function(i) {
-      //     var val = 0;
-      //     // $(this).hover(function(){
-      //     //   $(this).css('opacity',"1");  
-      //     // });
-      //     var item = $(this);
-      //     $(window).scroll(function() {
-      //         var top = item.offset().top;
-      //         if($(window).scrollTop() > top){
-      //             item.css('opacity',"1");
-      //         }
-      //     });  
-      //   });                
-      // }
+      console.log('beh');
+      if($('.block--wdark-main-menu')){
+        console.log("entra");
+        $( ".nav-item" ).each(function(i) {
+          var val = 0;
+          $(this).hover(function(){
+            //dropdown-menu
+            if($(this).find('dropdown-menu')){
+              console.log('fin');
+                $(this).find('div.dropdown-menu').toggleClass('show');
+            }
+            console.log('dropdown-menu');
+            // $(this).css('opacity',"1");  
+          });
+            
+        });                
+      }
       if($('.navbar-nav')){
       	$('.navbar-nav .nav-link').on('click', function(e){
       		e.preventDefault();
