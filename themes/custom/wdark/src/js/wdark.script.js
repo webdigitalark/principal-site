@@ -7,6 +7,37 @@ import 'bootstrap';
 
   Drupal.behaviors.helloWorld = {
     attach: function (context) {
+      if (!window.Cypress) {
+        const scrollCounter = document.querySelector('.fluid');
+        if($('.container-clients')){
+          $('.container-clients').parents('.basic__body').addClass('aos-all');
+          $('.container-clients').attr('data-aos','zoom-out-up');          
+        }
+        // const scrollCounter = document.querySelector('.services-home',".views-element-container");
+        if($('.services-home')){
+          $('.services-home').parents('.views-element-container').addClass('aos-all');
+          $('.services-home').attr('data-aos','zoom-out-down');          
+        }
+        if($('.list-services')){
+          $('.list-services').parents('.views-element-container').addClass('aos-all');
+          $('.list-services .list-services-container').attr('data-aos','flip-down');
+          // $('.list-services').attr('data-aos','zoom-out-down'); 
+        }
+        //views-element-container
+        //list-services
+        AOS.init({
+          mirror: true
+        });
+
+        document.addEventListener('aos:in', function(e) {
+          // console.log('in!', e.detail);
+        });
+
+        // window.addEventListener('scroll', function() {
+        //   scrollCounter.innerHTML = window.pageYOffset;
+        // });
+      }       
+
       console.log('Hello World');
       if($('#particles-js')){
       	$('#particles-js').css('opacity','100');	
