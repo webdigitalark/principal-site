@@ -20,7 +20,7 @@ import 'bootstrap';
         }
         if($('.list-services')){
           $('.list-services').parents('.views-element-container').addClass('aos-all');
-          $('.list-services .list-services-container').attr('data-aos','flip-down');
+          $('.list-services .list-services-container').attr('data-aos','fade-down');
           // $('.list-services').attr('data-aos','zoom-out-down'); 
         }
         //views-element-container
